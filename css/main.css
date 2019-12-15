@@ -1,3 +1,8 @@
+body {
+  background-color: black;
+  color: white;
+}
+
 #root {
   max-width: 47em;
   margin: 0 auto;
