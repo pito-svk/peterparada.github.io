@@ -3,6 +3,10 @@ body {
   color: white;
 }
 
+section > p, h5.section-title {
+  font-size: 22px;
+}
+
 #root {
   max-width: 47em;
   margin: 0 auto;
