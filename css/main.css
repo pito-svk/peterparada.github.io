@@ -133,3 +133,12 @@ a:hover {
 .article-date {
   font-size: 18px;
 }
+
+footer {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.center {
+  text-align: center;
+}
