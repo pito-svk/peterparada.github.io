@@ -104,11 +104,15 @@ a:hover {
   }
 }
 
-.blog-title {
+.blog-title-section {
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 50px;
   padding-right: 50px;
+}
+
+.blog-title {
+  font-size: 28px;
 }
 
 .blog-posts {
