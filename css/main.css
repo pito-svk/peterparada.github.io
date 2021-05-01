@@ -142,3 +142,7 @@ footer {
 .center {
   text-align: center;
 }
+
+code {
+  white-space: nowrap !important;
+}
