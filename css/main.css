@@ -104,6 +104,13 @@ a:hover {
   }
 }
 
+.banner {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
 .blog-article {
   padding-top: 20px;
   padding-bottom: 20px;
