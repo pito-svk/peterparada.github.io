@@ -104,11 +104,14 @@ a:hover {
   }
 }
 
-.blog-title-section {
+.blog-article {
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 50px;
   padding-right: 50px;
+}
+
+.blog-title-section {
 }
 
 .blog-title {
