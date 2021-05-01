@@ -114,3 +114,7 @@ a:hover {
 .blog-posts {
   list-style: none;
 }
+
+.article-date {
+  font-size: 18px;
+}
