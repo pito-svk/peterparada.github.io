@@ -145,3 +145,7 @@ footer {
 code {
   white-space: nowrap !important;
 }
+
+.blog-nav {
+  margin: 20px;
+}
