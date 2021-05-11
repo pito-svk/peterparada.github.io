@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/foundation.min.css" />
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="/css/prism.css" />
+
+  <title>
+    Useful Vim commands - Peter Parada
+  </title>
+</head>
+<body>
+  <header>
+    <nav class="blog-nav">
+      <section>
+        <a href="/blog">Blog</a>
+      </section>
+    </nav>
+  </header>
+  <main>
+    <div class="banner">
+      <img src="/img/problem-with-monitoring-tools-header.png" alt="">
+    </div>
+    <article>
+      <section class="blog-article">
+        <div class="blog-title-section">
+          <h1 class="blog-title">Problem with monitoring (Grafana & Prometheus)</h1>
+          <h2 class="article-date">May 11th, 2021</h2>
+        </div>
+        <p>Most common open source monitoring stack for monitoring servers is I think, Grafana + Prometheus.</p>
+        <p>They are great when you have time to setup everything as you need, especially Grafana is very customizable, but designing your own Grafana dashboard is not a trivial task.</p>
+        <p>Solution for this is using Grafana dashboards made by other people, which kind of works but when you need to customize it, you have to either look at usually huge json file which is not intuitive, or by editing via Grafana UI. Second option is OK, but still not ideal (still takes some time).</p>
+        <p>Another issue is when you download dashboard and start to use it, not all Prometheus queries might work, so you have to look at them analyze and fix case by case.</p>
+        <p>It's very nice to have somebody to generate dashboard for you, so you don't have to, but it's mostly random people and quality of them isn't always great or sufficient and you still have to tweak it to your needs. You don't like (at least not in my experience) official dashboard for product ABC made by company XYZ which owns this same product same way as it works with Docker Hub or NPM registry in most cases.</p>
+        <p>I don't want to spend days or weeks tweaking monitoring of my servers, I just want to monitor basic things like CPU/Memory/Disk usage/... which everybody is monitoring. I want an opinionated open source tool.</p>
+        <p>One solution might be CLI utility to generate your own Grafana dashboard file based on parameters what you want to monitor how you want to have alert setup etc. just very opinionated, let's say I choose I want to monitor CPU/monitoring/memory usage but not memory swap or disk usage. Then you can setup monitoring things - I want to send info to Slack/Teams/Email etc. I don't want to think about how to configure it, it just generated necessary config files which I will put to Grafana/Prometheus environments where needed.</p>
+        <p>This tool won't be flexible, but it's OK, I don't need that, at least not for now.</p>
+        <p>My plan is to build this CLI utility which will be public and open source. First I will play with this myself if smth like that could work or not, then building it on GitHub. As I am currently working mostly with Kubernetes, my first focus will be on monitoring Kubernetes ecosystem.</p>
+        <p>Wish me good luck...</p>
+      </section>
+    </article>
+  </main>
+  <footer class="center">
+    Copyright © 2021 Peter Parada. All rights reserved.
+  </footer>
+  <script src="/js/prism.js"></script>
+</body>
+</html>
