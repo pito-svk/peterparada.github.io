@@ -170,4 +170,5 @@ code {
 
 #code-structure {
   white-space: pre-wrap !important;
+  border: none;
 }
