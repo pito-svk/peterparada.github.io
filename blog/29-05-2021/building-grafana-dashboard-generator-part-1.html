@@ -80,14 +80,33 @@
           </pre>
           <h3 class="blog-paragraph-title-smaller">Main module</h3>
           <pre class="pre-multi-line-show">
-            <code class="language-go multi-line-show">
-              package main
+<code class="language-go multi-line-show">
+  package main
 
-              import "github.com/pito-svk/grafana-simple-dashboard-generator/cmd"
+  import "github.com/pito-svk/grafana-simple-dashboard-generator/cmd"
 
-              func main() {
-                cmd.Execute()
-              }</code>
+  func main() {
+    cmd.Execute()
+  }</code>
+          </pre>
+          <p>Main module initializes a CLI application which is defined in <i>cmd/root.go</i></p>
+          <h3 class="blog-paragraph-title-smaller">cmd/root.go</h3>
+          <pre class="pre-multi-line-show">
+<code class="language-go multi-line-show">
+  package cmd
+
+  import (
+    "github.com/spf13/cobra"
+  )
+
+  var rootCmd = &cobra.Command{
+    Use:   "grafana-simple-dashboard-generator",
+    Short: "Grafana simple dashboard generator",
+  }
+
+  func Execute() {
+    cobra.CheckErr(rootCmd.Execute())
+  }</code>
           </pre>
         </section>
       </article>
