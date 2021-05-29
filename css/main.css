@@ -180,4 +180,5 @@ code {
 .multi-line-show {
   white-space: pre-wrap !important;
   border: none !important;
+  background-color: #fdf6e3 !important;
 }
