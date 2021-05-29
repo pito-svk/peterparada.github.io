@@ -1,46 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/css/foundation.min.css" />
-  <link rel="stylesheet" href="/css/main.css" />
-  <link rel="stylesheet" href="/css/prism.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/foundation.min.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/prism.css" />
 
-  <title>
-    Building Grafana dashboard generator (part 1) - Peter Parada
-  </title>
-</head>
-<body>
-  <header>
-    <nav class="blog-nav">
-      <section>
-        <a href="/blog">Blog</a>
-      </section>
-    </nav>
-  </header>
-  <main>
-    <div class="banner">
-      <img src="/img/building-project-skeleton.png" alt="">
-    </div>
-    <article>
-      <section class="blog-article">
-        <div class="blog-title-section">
-          <h1 class="blog-title">Building Grafana dashboard generator (part 1)</h1>
-          <h2 class="blog-subtitle">Building a project skeleton</h3>
-          <h2 class="article-date">May 29th, 2021</h2>
-        </div>
-        <br>
-        <p>Following on the previous <a href="/blog/11-05-2021/problem-with-monitoring">blog post</a> I decided to build something I called Grafana simple dashboard generator (which might change it's name later to be more descriptive). The whole meaning of this is to have single cli utility to generate most needed dashboard metrics in Grafana without spending too much learning Prometheus queries and tweaking it.</p>
-        <p></p>
-        <p> Most of the people don't need sophisticated graphs or visualizations, we have a pretty good idea what needs to be monitored and when it's too bad that we have to check what's going on, i.e. alerting.</p>
-      </section>
-    </article>
-  </main>
-  <footer class="center">
-    Copyright © 2021 Peter Parada. All rights reserved.
-  </footer>
-  <script src="/js/prism.js"></script>
-</body>
+    <title>
+      Building Grafana dashboard generator (part 1) - Peter Parada
+    </title>
+  </head>
+  <body>
+    <header>
+      <nav class="blog-nav">
+        <section>
+          <a href="/blog">Blog</a>
+        </section>
+      </nav>
+    </header>
+    <main>
+      <div class="banner">
+        <img src="/img/building-project-skeleton.png" alt="" />
+      </div>
+      <article>
+        <section class="blog-article">
+          <div class="blog-title-section">
+            <h1 class="blog-title">
+              Building Grafana dashboard generator (part 1)
+            </h1>
+            <h2 class="blog-subtitle">Building a project skeleton</h2>
+            <h2 class="article-date">May 29th, 2021</h2>
+          </div>
+          <br />
+          <p>
+            Following on the previous
+            <a href="/blog/11-05-2021/problem-with-monitoring">blog post</a> I
+            decided to build something I called Grafana simple dashboard
+            generator (which might change it's name later to be more
+            descriptive). The whole meaning of this is to have single cli
+            utility to generate most needed dashboard metrics in Grafana without
+            spending too much learning Prometheus queries and tweaking it.
+          </p>
+          <p></p>
+          <p>
+            Most of the people don't need sophisticated graphs or
+            visualizations, we have a pretty good idea what needs to be
+            monitored and when it's too bad that we have to check what's going
+            on, i.e. alerting.
+          </p>
+          <p>
+            In this post I will show building project skeleton for CLI utility
+            to generate grafana dashboard. I decided to write it in Go with the
+            help of <a href="https://github.com/spf13/cobra">cobra module</a>.
+          </p>
+        </section>
+      </article>
+    </main>
+    <footer class="center">
+      Copyright © 2021 Peter Parada. All rights reserved.
+    </footer>
+    <script src="/js/prism.js"></script>
+  </body>
 </html>
