@@ -102,6 +102,10 @@ a:hover {
     padding-left: 0.9375em;
     padding-right: 0.9375em;
   }
+
+  .banner img {
+   display: none;
+  }
 }
 
 .banner {
