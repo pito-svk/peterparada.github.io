@@ -221,6 +221,10 @@
           <br />
           <p>cmd/init.go contains logic for <i>init</i> command which is responsible for generating Grafana dashboard.</p>
           <p>In <i>init</i> function there are defined four flags so far: <i>mode</i>, <i>output</i>, <i>filepath</i> and <i>title</i>.</p>
+          <p><i>Mode</i> will specify what you want to see in Grafana dashboard, such as CPU, memory, etc. Currently only <i>default</i> mode is allowed, which will contain all needed metrics in dashboard.</p>
+          <p><i>Output</i> specifies how you want your dashboard receive. Either in console output in terminal or in specific file.</p>
+          <p><i>Filepath</i> is required when <i>file</i> output is specified, which specify a path where to write Grafana dashboard.</p>
+          <p><i>Title</i> is the title of Grafana dashboard.</p>
         </section>
       </article>
     </main>
