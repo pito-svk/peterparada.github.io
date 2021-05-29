@@ -133,6 +133,10 @@ a:hover {
   font-size: 20px;
 }
 
+.blog-paragraph-title-smaller {
+  font-size: 18px;
+}
+
 .blog-posts {
   list-style: none;
   margin: 0;
