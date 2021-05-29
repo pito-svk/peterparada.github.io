@@ -78,7 +78,9 @@
   ├── go.sum
   └── main.go</code>
           </pre>
+          <br>
           <h3 class="blog-paragraph-title-smaller">Main module</h3>
+          <br>
           <pre class="pre-multi-line-show">
 <code class="language-go multi-line-show">
   package main
@@ -90,7 +92,9 @@
   }</code>
           </pre>
           <p>Main module initializes a CLI application which is defined in <i>cmd/root.go</i></p>
+          <br>
           <h3 class="blog-paragraph-title-smaller">cmd/root.go</h3>
+          <br>
           <pre class="pre-multi-line-show">
 <code class="language-go multi-line-show">
   package cmd
@@ -127,7 +131,69 @@
 
   Use "grafana-simple-dashboard-generator [command] --help" for more information about a command.</code>
 </pre>
+          <br>
           <h3 class="blog-paragraph-title-smaller">cmd/init.go</h3>
+          <br>
+          <pre class="pre-multi-line-show">
+            <code class="language-go multi-line-show">
+  package cmd
+
+  import (
+    "encoding/json"
+    "fmt"
+    "os"
+
+    "github.com/pito-svk/grafana-simple-dashboard-generator/dashboard"
+    "github.com/spf13/cobra"
+  )
+
+  var (
+    mode     string
+    output   string
+    filepath string
+    title    string
+  )
+
+  var initCmd = &cobra.Command{
+    Use:   "init",
+    Short: "Generate new grafana dashboard",
+    RunE: func(cmd *cobra.Command, args []string) error {
+      if output != "console" && output != "file" {
+        return fmt.Errorf("invalid value for output. Allowed values: [\"console\", \"file\"]")
+      }
+
+      if mode != "basic" {
+        return fmt.Errorf("invalid value for mode. Allowed values: [\"default\"]")
+      }
+
+      if output == "file" && filepath == "" {
+        return fmt.Errorf("filepath is required when output is \"file\"")
+      }
+
+      dashboardParams := dashboard.GrafanaDashboardParams{Title: title}
+
+      dashboard := dashboard.GenerateDashboard(&dashboardParams)
+      jsonRes, _ := json.MarshalIndent(dashboard, "", "	")
+
+      if output == "console" {
+        fmt.Println(string(jsonRes))
+      } else if output == "file" {
+        os.WriteFile(filepath, jsonRes, 0644)
+      }
+
+      return nil
+    },
+  }
+
+  func init() {
+    rootCmd.AddCommand(initCmd)
+
+    initCmd.Flags().StringVarP(&mode, "mode", "m", "default", "dashboard mode")
+    initCmd.Flags().StringVarP(&output, "output", "o", "console", "specify output mode")
+    initCmd.Flags().StringVarP(&filepath, "filepath", "f", "", "specify a filepath to generate dashboards")
+    initCmd.Flags().StringVarP(&title, "title", "t", "Server monitoring", "specify a title for dashboard")
+  }</code>
+                      </pre>
         </section>
       </article>
     </main>
