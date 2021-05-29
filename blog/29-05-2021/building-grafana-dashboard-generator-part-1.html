@@ -57,26 +57,30 @@
           </p>
           <h3 class="blog-paragraph-title-smaller">Code structure</h3>
           <p>
-            So far code only contains 2 folders - <i>cmd</i> and <i>dashboard</i>.
-            <br>
-            <i>Cmd</i> is responsible for manipulation via CLI and <i>dashboard</i> will contain logic for Grafana dashboard generation.
-            <br>
+            So far code only contains 2 folders - <i>cmd</i> and
+            <i>dashboard</i>.
+            <br />
+            <i>Cmd</i> is responsible for manipulation via CLI and
+            <i>dashboard</i> will contain logic for Grafana dashboard
+            generation.
+            <br />
             <i>Main</i> module initializes cobra CLI application.
-            <pre id="pre-code-structure">
-              <code id="code-structure" class="language-vim">
-                ├── LICENSE
-                ├── README.md
-                ├── cmd
-                │   ├── init.go
-                │   └── root.go
-                ├── dashboard
-                │   └── dashboard.go
-                ├── go.mod
-                ├── go.sum
-                └── main.go
-              </code>
-            </pre>
           </p>
+          <pre class="pre-multi-line-show">
+            <code class="language-vim multi-line-show">
+              ├── LICENSE
+              ├── README.md
+              ├── cmd
+              │   ├── init.go
+              │   └── root.go
+              ├── dashboard
+              │   └── dashboard.go
+              ├── go.mod
+              ├── go.sum
+              └── main.go
+            </code>
+          </pre>
+          <h3 class="blog-paragraph-title-smaller">Main</h3>
         </section>
       </article>
     </main>

@@ -172,14 +172,14 @@ code {
   margin: 0 auto;
 }
 
-#pre-code-structure {
-  border: none;
-  box-shadow: none;
+.pre-multi-line-show {
+  border: none !important;
+  box-shadow: none !important;
   max-width: 500px;
 }
 
-#code-structure {
+.multi-line-show {
   white-space: pre-wrap !important;
-  border: none;
+  border: none !important;
   max-width: 200px;
 }
