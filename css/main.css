@@ -109,6 +109,7 @@ a:hover {
   padding-bottom: 30px;
   padding-left: 50px;
   padding-right: 50px;
+  overflow: hidden;
 }
 
 .blog-article {
