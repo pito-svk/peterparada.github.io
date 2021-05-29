@@ -110,7 +110,23 @@
           </pre>
           <p>cmd/root.go file contains variable rootCmd calling cobra.Command, which initializes cobra CLI with <i>Use</i> and <i>Short</i> properties.</p>
           <p><i>Use</i> property is a command name. In this case you will call: <i><b>grafana-simple-dashboard-generator [command]</b></i> when generating Grafana dashboards.</p>
-          <p><i>Short</i> property is a short description of what is command doing and will be shown when you will call help command: <i><b>grafana-simple-dashboard-generator help</b></i>.</p>
+          <p><i>Short</i> property is a short description of what is command doing and will be shown when you will call help command: <i><b>grafana-simple-dashboard-generator help</b></i>:</p>
+          <pre class="pre-multi-line-show" style="background-color: white !important;">
+<code class="language-vim multi-line-show" style="background-color: white !important;">
+  Grafana simple dashboard generator
+
+  Usage:
+    grafana-simple-dashboard-generator [command]
+
+  Available Commands:
+    help        Help about any command
+    init        Generate new grafana dashboard
+
+  Flags:
+    -h, --help   help for grafana-simple-dashboard-generator
+
+  Use "grafana-simple-dashboard-generator [command] --help" for more information about a command.</code>
+</pre>
         </section>
       </article>
     </main>
