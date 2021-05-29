@@ -167,3 +167,7 @@ code {
   max-width: 80%;
   margin: 0 auto;
 }
+
+#code-structure {
+  max-width: 300px;
+}
