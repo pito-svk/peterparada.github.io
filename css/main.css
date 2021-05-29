@@ -119,6 +119,10 @@ a:hover {
   font-size: 30px;
 }
 
+.blog-subtitle {
+  font-size: 16px;
+}
+
 #main-blog-section {
   padding-bottom: 30px;
   padding-left: 50px;
