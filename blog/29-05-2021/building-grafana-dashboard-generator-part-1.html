@@ -225,6 +225,8 @@
           <p><i>Output</i> specifies how you want your dashboard receive. Either in console output in terminal or in specific file.</p>
           <p><i>Filepath</i> is required when <i>file</i> output is specified, which specify a path where to write Grafana dashboard.</p>
           <p><i>Title</i> is the title of Grafana dashboard.</p>
+          <p>The core logic of <i>init</i> command lies in <i>RunE</i> handler, which also handles validation.</p>
+          <p>Inside of this handler there is <i><b>"dashboard := dashboard.GenerateDashboard(&dashboardParams)"</b></i> responsible for generating Grafana dashboard object.</p>
         </section>
       </article>
     </main>
