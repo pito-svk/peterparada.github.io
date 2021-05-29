@@ -169,5 +169,5 @@ code {
 }
 
 #code-structure {
-  white-space: pre !important;
+  white-space: pre-wrap !important;
 }
