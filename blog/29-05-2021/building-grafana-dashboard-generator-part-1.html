@@ -108,7 +108,8 @@
     cobra.CheckErr(rootCmd.Execute())
   }</code>
           </pre>
-          <p>cmd/root.go file contains cobra module ...</p>
+          <p>cmd/root.go file contains variable rootCmd calling cobra.Command, which initializes cobra CLI with <i>Use</i> and <i>Short</i> properties.</p>
+          <p><i>Use</i> property is a command name. In this case you will call: <i>grafana-simple-dashboard-generator [command]</i> when generating Grafana dashboards.</p>
         </section>
       </article>
     </main>

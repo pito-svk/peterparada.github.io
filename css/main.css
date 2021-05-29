@@ -172,6 +172,10 @@ code {
   margin: 0 auto;
 }
 
+.no-border {
+  border: none !important;
+}
+
 .pre-multi-line-show {
   border: none !important;
   box-shadow: none !important;
