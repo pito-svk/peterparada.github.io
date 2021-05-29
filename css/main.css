@@ -171,6 +171,7 @@ code {
 #pre-code-structure {
   border: none;
   box-shadow: none;
+  max-width: 500px;
 }
 
 #code-structure {
