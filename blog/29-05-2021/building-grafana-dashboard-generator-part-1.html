@@ -91,6 +91,7 @@
     cmd.Execute()
   }</code>
           </pre>
+          <br>
           <p>Main module initializes a CLI application which is defined in <i>cmd/root.go</i></p>
           <br>
           <h3 class="blog-paragraph-title-smaller">cmd/root.go</h3>
@@ -112,6 +113,7 @@
     cobra.CheckErr(rootCmd.Execute())
   }</code>
           </pre>
+          <br>
           <p>cmd/root.go file contains variable rootCmd calling cobra.Command, which initializes cobra CLI with <i>Use</i> and <i>Short</i> properties.</p>
           <p><i>Use</i> property is a command name. In this case you will call: <i><b>grafana-simple-dashboard-generator [command]</b></i> when generating Grafana dashboards.</p>
           <p><i>Short</i> property is a short description of what is command doing and will be shown when you will call help command: <i><b>grafana-simple-dashboard-generator help</b></i>:</p>
@@ -193,7 +195,9 @@
     initCmd.Flags().StringVarP(&filepath, "filepath", "f", "", "specify a filepath to generate dashboards")
     initCmd.Flags().StringVarP(&title, "title", "t", "Server monitoring", "specify a title for dashboard")
   }</code>
-                      </pre>
+      </pre>
+      <br>
+
         </section>
       </article>
     </main>
