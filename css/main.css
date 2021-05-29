@@ -175,11 +175,9 @@ code {
 .pre-multi-line-show {
   border: none !important;
   box-shadow: none !important;
-  max-width: 500px;
 }
 
 .multi-line-show {
   white-space: pre-wrap !important;
   border: none !important;
-  max-width: 200px;
 }
