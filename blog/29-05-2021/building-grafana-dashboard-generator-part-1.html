@@ -37,25 +37,31 @@
           <p>
             Following on the previous
             <a href="/blog/11-05-2021/problem-with-monitoring">blog post</a> I
-            decided to build something I called <i>Grafana simple dashboard
-              generator</i>. The whole point of this is to have a single CLI
-            utility to generate the most needed dashboard metrics in Grafana without
-            spending too much time learning Prometheus queries and tweaking them.
+            decided to build something I called
+            <i>Grafana simple dashboard generator</i>. The whole point of this
+            is to have a single CLI utility to generate the most needed
+            dashboard metrics in Grafana without spending too much time learning
+            Prometheus queries and tweaking them.
           </p>
           <p></p>
           <p>
-            Most people don't need sophisticated graphs or
-            visualizations, we have a pretty good idea of what needs to be
-            monitored and when it's too bad that we have to check what's going
-            on, i.e. alerting.
+            Most people don't need sophisticated graphs or visualizations, we
+            have a pretty good idea of what needs to be monitored and when it's
+            too bad that we have to check what's going on, i.e. alerting.
           </p>
           <p>
-            In this post, I will show building project skeleton for this CLI utility. I decided to write it in Go with the
-            help of the <a href="https://github.com/spf13/cobra">cobra module</a>.
+            In this post, I will show building project skeleton for this CLI
+            utility. I decided to write it in Go with the help of the
+            <a href="https://github.com/spf13/cobra">cobra module</a>.
           </p>
           <h3 class="blog-paragraph-title-smaller">Code structure</h3>
           <p>
-            So far the <a href="https://github.com/pito-svk/grafana-simple-dashboard-generator">code</a> contains 2 folders - <i>cmd</i> and <i>dashboard</i>.
+            So far the
+            <a
+              href="https://github.com/pito-svk/grafana-simple-dashboard-generator"
+              >code</a
+            >
+            contains 2 folders - <i>cmd</i> and <i>dashboard</i>.
             <br />
             <i>Cmd</i> is responsible for manipulation via CLI and the
             <i>dashboard</i> will contain logic for Grafana dashboard.
@@ -216,19 +222,49 @@
   }</code>
       </pre>
           <br />
-          <p>cmd/init.go contains logic for <i>init</i> command which is responsible for generating Grafana dashboard.</p>
-          <p>In <i>init</i> function, there are defined four flags so far: <i>mode</i>, <i>output</i>, <i>filepath</i>, and <i>title</i>.</p>
-          <p><i>Mode</i> will specify what you want to see in the Grafana dashboard, such as CPU, memory, etc. Currently, the only <i>default</i> mode is allowed, which will contain all needed metrics in the dashboard.</p>
-          <p><i>Output</i> specifies how you want your dashboard to receive. Either in console output in terminal or in specific file.</p>
-          <p><i>Filepath</i> is required when <i>file</i> output is specified, which specifies a path where to write the Grafana dashboard.</p>
+          <p>
+            cmd/init.go contains logic for <i>init</i> command which is
+            responsible for generating Grafana dashboard.
+          </p>
+          <p>
+            In <i>init</i> function, there are defined four flags so far:
+            <i>mode</i>, <i>output</i>, <i>filepath</i>, and <i>title</i>.
+          </p>
+          <p>
+            <i>Mode</i> will specify what you want to see in the Grafana
+            dashboard, such as CPU, memory, etc. Currently, the only
+            <i>default</i> mode is allowed, which will contain all needed
+            metrics in the dashboard.
+          </p>
+          <p>
+            <i>Output</i> specifies how you want your dashboard to receive.
+            Either in console output in terminal or in specific file.
+          </p>
+          <p>
+            <i>Filepath</i> is required when <i>file</i> output is specified,
+            which specifies a path where to write the Grafana dashboard.
+          </p>
           <p><i>Title</i> is the title of the Grafana dashboard.</p>
-          <p>The core logic of <i>init</i> command lies in <i>RunE</i> handler, which also handles validation.</p>
-          <p>Inside of this handler, there is <i><b>"dashboard.GenerateDashboard(&dashboardParams)"</b></i> responsible for generating Grafana dashboard object.</p>
-          <br>
+          <p>
+            The core logic of <i>init</i> command lies in <i>RunE</i> handler,
+            which also handles validation.
+          </p>
+          <p>
+            Inside of this handler, there is
+            <i><b>"dashboard.GenerateDashboard(&dashboardParams)"</b></i>
+            responsible for generating Grafana dashboard object.
+          </p>
+          <br />
           <h3 class="blog-paragraph-title-smaller">Conclusion</h3>
-          <br>
-          <p>In this article, I was presenting the skeleton of the Grafana dashboard generator CLI.</p>
-          <p>In the next article, I will work on the actual logic of generating the Grafana dashboard.</p>
+          <br />
+          <p>
+            In this article, I was presenting the skeleton of the Grafana
+            dashboard generator CLI.
+          </p>
+          <p>
+            In the next article, I will work on the actual logic of generating
+            the Grafana dashboard.
+          </p>
         </section>
       </article>
     </main>
